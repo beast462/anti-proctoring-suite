@@ -1,0 +1,44 @@
+{
+  "name": "APSCE",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Prevent proctoring tools from monitoring you",
+  "homepage_url": "https://github.com/homeeellc/anti-proctoring-suite",
+  "icons": {
+    "18": "icons/18x18.png",
+    "48": "icons/48x48.png",
+    "144": "icons/144x144.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "icons/48x48.png",
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "file://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*",
+        "file://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "src/inject/_inject.js"
+  ]
+}

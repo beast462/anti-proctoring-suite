@@ -1,0 +1,78 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "globals": {
+        "JSX": "writable",
+        "JQuery": "writable"
+    },
+    "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+        },
+        "ecmaVersion": 12
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "nemoxps"
+    ],
+    "rules": {
+        "no-console": "off",
+        "arrow-parens": "warn",
+        "class-methods-use-this": "off",
+        "no-tabs": "warn",
+        "no-useless-constructor": "off",
+        "no-empty-function": "off",
+        "camelcase": "off",
+        "object-curly-newline": "off",
+        "function-paren-newline": "off",
+        "indent": "off",
+        "nemoxps/indent": ["warn", 2, {
+            "SwitchCase": 1,
+            "ClassDeclaration": 2
+        }],
+        "import/no-extraneous-dependencies": ["error", {
+            "devDependencies": true
+        }],
+        "import/no-dynamic-require": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "import/newline-after-import": "off",
+        "lines-between-class-members": "off",
+        "no-unused-vars": "off",
+        "no-shadow": "off",
+        "no-var-requires": "off",
+        "no-underscore-dangle": "off",
+        "no-restricted-syntax": "off",
+        "no-param-reassign": ["error", { "props": false }],
+        "implicit-arrow-linebreak": "off",
+        "consistent-return": "off",
+        "operator-linebreak": "off",
+        "no-use-before-define": "off",
+        "no-bitwise": "off",
+        "no-confusing-arrow": "off",
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "react/destructuring-assignment": "off",
+        "react/self-closing-comp": "off",
+        "react/jsx-closing-bracket-location": ["error", {
+            "nonEmpty": "after-props",
+            "selfClosing": "tag-aligned"
+        }],
+        "react/jsx-wrap-multilines": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "@typescript-eslint/no-unused-vars": ["error", {
+            "varsIgnorePattern": "^_"
+        }],
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/ban-ts-comment": "off"
+    }
+}
